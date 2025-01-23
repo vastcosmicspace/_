@@ -1,22 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="0; url=https://thecosmic.space">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta property="og:title" content="Aman (PgM | Google (as Consultant) | 17+ years)">
-  <meta property="og:description" content="Data Visualizer | Stealth Strategist">
-  <meta property="og:image" content="https://lh3.googleusercontent.com/pw/AP1GczM6uuSVtpMbF7z9E_R2Eem8WC1sWMk8SkGoe4VdLQydELUrJst6nFDWzMHATOl46u_IFWzvUO21u2brqT-OmXEYcSbi0czKaJj0bpIyABfkqOBryvljZmgyhLG-BPW7DeZpY3uXoKYK4Ey-NyWOUU5t=w192-h192-s-no-gm?authuser=0">
-  <meta property="og:url" content="https://thecosmic.space">
-  <meta name="twitter:card" content="Aman"> <!-- Twitter Card for better preview -->
-  <meta name="twitter:title" content="Aman (PgM | Google (as Consultant) | 17+ years)">
-  <meta name="twitter:description" content="Data Visualizer | Stealth Strategist">
-  <meta name="twitter:image" content="https://lh3.googleusercontent.com/pw/AP1GczM6uuSVtpMbF7z9E_R2Eem8WC1sWMk8SkGoe4VdLQydELUrJst6nFDWzMHATOl46u_IFWzvUO21u2brqT-OmXEYcSbi0czKaJj0bpIyABfkqOBryvljZmgyhLG-BPW7DeZpY3uXoKYK4Ey-NyWOUU5t=w192-h192-s-no-gm?authuser=0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta property="og:title" content="Aman (PgM | Google (xWF) | 17+ years)">
+        <meta property="og:description" content="Data Visualizer | Stealth Strategist">
+        <meta property="og:image" content="https://lh3.googleusercontent.com/pw/AP1GczM6uuSVtpMbF7z9E_R2Eem8WC1sWMk8SkGoe4VdLQydELUrJst6nFDWzMHATOl46u_IFWzvUO21u2brqT-OmXEYcSbi0czKaJj0bpIyABfkqOBryvljZmgyhLG-BPW7DeZpY3uXoKYK4Ey-NyWOUU5t=w192-h192-s-no-gm?authuser=0">
+        <meta property="og:url" content="https://thecosmic.space">
+        <meta name="twitter:card" content="Aman">
+        <!-- Twitter Card for better preview -->
+        <meta name="twitter:title" content="Aman (PgM | Google (xWF) | 17+ years)">
+        <meta name="twitter:description" content="Data Visualizer | Stealth Strategist">
+        <meta name="twitter:image" content="https://lh3.googleusercontent.com/pw/AP1GczM6uuSVtpMbF7z9E_R2Eem8WC1sWMk8SkGoe4VdLQydELUrJst6nFDWzMHATOl46u_IFWzvUO21u2brqT-OmXEYcSbi0czKaJj0bpIyABfkqOBryvljZmgyhLG-BPW7DeZpY3uXoKYK4Ey-NyWOUU5t=w192-h192-s-no-gm?authuser=0">
+        <title>Aman's Portfolio</title>
+        <style>
+            /* General styles */
+            body {
+                font-family: Arial, sans-serif;
+            }
 
-  <title>Aman's Portfolio</title>
-</head>
-<body>
-  <!-- Your content here -->
-</body>
+            .content {
+                user-select: none;
+                /* Disable text selection */
+            }
+
+            /* Disable right-click context menu */
+            body {
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+            }
+
+            /* Hide the protected content initially */
+            #protectedContent {
+                display: none;
+            }
+
+            /* 404 Error styles */
+            #errorContent {
+                display: none;
+                text-align: center;
+                background-color: #f4f4f4;
+                color: #e74c3c;
+                padding: 50px;
+            }
+
+            #errorContent h1 {
+                font-size: 50px;
+            }
+
+            #errorContent p {
+                font-size: 20px;
+            }
+
+            #errorContent a {
+                color: #3498db;
+                text-decoration: none;
+            }
+
+            #errorContent a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Content that will be hidden until the passphrase is entered -->
+        <div id="protectedContent" class="content">
+            <h2>This is the protected content.</h2>
+            <p>You now have access to view the page.</p>
+            <h3>Exclusive Information:</h3>
+            <ul>
+                <li>Only users with valid names have access to this content.</li>
+                <li>Keep your name secure and do not share it with others!</li>
+            </ul>
+        </div>
+        <!-- Custom 404 error content -->
+        <div id="errorContent">
+            <h1>Oops! Access Denied (404)</h1>
+            <p>Sorry, your name is not authorized to access this page.</p>
+            <p>
+                You might want to go back to the <a href="https://thecosmic.space">homepage</a>
+                .
+            </p>
+        </div>
+        <script>
+            // Define an array of valid names (these will be the "passphrases")
+            const validNames = ['Aman.', 'Mohit', 'Atul', 'Ajith'];
+
+            // Prompt the user for their first name (passphrase)
+            let userName = prompt('Please enter your first name to access this page:');
+
+            // Normalize both the input name and valid names to lowercase for case-insensitive comparison
+            const normalizedUserName = userName.trim().toLowerCase();
+            const validNamesLower = validNames.map(name => name.toLowerCase());
+
+            // Check if the entered name matches any of the valid names (case-insensitive)
+            if (validNamesLower.includes(normalizedUserName)) {
+                // If the name matches, redirect the user to the protected page
+                window.location.href = 'https://www.thecosmic.space';
+                // Replace with your desired protected URL
+            } else {
+                // If the name does not match, show the custom 404 error message
+                document.getElementById('errorContent').style.display = 'block';
+            }
+
+            // Disable right-click context menu
+            document.addEventListener("contextmenu", function(e) {
+                e.preventDefault();
+            });
+        </script>
+    </body>
 </html>
