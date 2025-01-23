@@ -85,7 +85,30 @@
             </p>
         </div>
         <script>
-const _0x503cd2=_0x2c74;function _0x2c74(_0x2cbad0,_0x4b38a6){const _0x354b47=_0x354b();return _0x2c74=function(_0x2c744c,_0x546074){_0x2c744c=_0x2c744c-0x96;let _0x1cb990=_0x354b47[_0x2c744c];return _0x1cb990;},_0x2c74(_0x2cbad0,_0x4b38a6);}function _0x354b(){const _0x1a1a5b=['display','location','926573XgaYpZ','5563187pcZkIV','2971542DxVKUz','Aman.','2152782omuCNp','56ynKBey','includes','contextmenu','map','href','856120XsTziv','4iVfrmI','getElementById','5972130oLDTSg','addEventListener','toLowerCase','style','Mohit','trim','Please\x20enter\x20your\x20first\x20name\x20to\x20access\x20this\x20page:','block','Ajith','Atul','1598499wqczVO'];_0x354b=function(){return _0x1a1a5b;};return _0x354b();}(function(_0xa60026,_0x44c4e0){const _0x1a69b7=_0x2c74,_0x19e235=_0xa60026();while(!![]){try{const _0x5e11a9=parseInt(_0x1a69b7(0xab))/0x1+parseInt(_0x1a69b7(0x9b))/0x2+parseInt(_0x1a69b7(0xa8))/0x3*(-parseInt(_0x1a69b7(0x9c))/0x4)+parseInt(_0x1a69b7(0x9e))/0x5+-parseInt(_0x1a69b7(0xad))/0x6+parseInt(_0x1a69b7(0xac))/0x7+-parseInt(_0x1a69b7(0x96))/0x8*(parseInt(_0x1a69b7(0xaf))/0x9);if(_0x5e11a9===_0x44c4e0)break;else _0x19e235['push'](_0x19e235['shift']());}catch(_0x4da42c){_0x19e235['push'](_0x19e235['shift']());}}}(_0x354b,0x9c92c));const validNames=[_0x503cd2(0xae),_0x503cd2(0xa2),_0x503cd2(0xa7),_0x503cd2(0xa6)];let userName=prompt(_0x503cd2(0xa4));const normalizedUserName=userName[_0x503cd2(0xa3)]()[_0x503cd2(0xa0)](),validNamesLower=validNames[_0x503cd2(0x99)](_0x536c9d=>_0x536c9d[_0x503cd2(0xa0)]());validNamesLower[_0x503cd2(0x97)](normalizedUserName)?window[_0x503cd2(0xaa)][_0x503cd2(0x9a)]='https://www.thecosmic.space':document[_0x503cd2(0x9d)]('errorContent')[_0x503cd2(0xa1)][_0x503cd2(0xa9)]=_0x503cd2(0xa5);document[_0x503cd2(0x9f)](_0x503cd2(0x98),function(_0x2fe354){_0x2fe354['preventDefault']();});
+            // Define an array of valid names (these will be the "passphrases")
+            const validNames = ['Aman.', 'Mohit', 'Atul', 'Ajith'];
+
+            // Prompt the user for their first name (passphrase)
+            let userName = prompt('Please enter your first name to access this page:');
+
+            // Normalize both the input name and valid names to lowercase for case-insensitive comparison
+            const normalizedUserName = userName.trim().toLowerCase();
+            const validNamesLower = validNames.map(name => name.toLowerCase());
+
+            // Check if the entered name matches any of the valid names (case-insensitive)
+            if (validNamesLower.includes(normalizedUserName)) {
+                // If the name matches, redirect the user to the protected page
+                window.location.href = 'https://www.thecosmic.space';
+                // Replace with your desired protected URL
+            } else {
+                // If the name does not match, show the custom 404 error message
+                document.getElementById('errorContent').style.display = 'block';
+            }
+
+            // Disable right-click context menu
+            document.addEventListener("contextmenu", function(e) {
+                e.preventDefault();
+            });
         </script>
     </body>
 </html>
